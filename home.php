@@ -1,64 +1,169 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <link rel="stylesheet" type="text/css" href="css/admin.css">
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
- 
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+  <title>Home</title>
 </head>
+
 <body>
+  <input type="checkbox" id="check">
+  <label for="check">
+    <i class="fas fa-bars" id="btn"></i>
+    <i class="fas fa-times" id="cancel"></i>
+  </label>
   <div class="container">
     <div class="navbar">
       <ul>
+        <div class="menu-title">Menu</div>
+         <li class="item">
+          <div class="submenu-item">
+            <span>Inbound</span>
+          </div>
+          <ul class="menu-items submenu">
+            <div class="menu-tittle">
+            </div>
+            <li class="item">
+              <a href="#">Purchase Order (PO)</a>
+            </li>
+            <li class="item">
+              <a href="#">Advance Shipping Note (ASN)</a>
+            </li>
+            <li class="item">
+              <a href="#">GRN</a>
+            </li>
+            <li class="item">
+              <a href="#">Create</a>
+            </li>
+            <li class="item">
+              <a href="#">Bulk Inbound Stock Update</a>
+            </li>
+          </ul>
+        </li>
+        <li class="item">
+          <div class="submenu-item">
+            <span>Put Away</span>
+          </div>
+          <ul class="menu-items submenu">
+            <div class="menu-tittle">
+            </div>
+            <li class="item">
+              <a href="#">Inbound</a>
+            </li>
+            <li class="item">
+              <a href="#">Return Orders</a>
+            </li>
+            <li class="item">
+              <a href="#">Canccel Orders</a>
+            </li>
+            <li class="item">
+              <a href="#">Putaway List</a>
+            </li>
+          </ul>
+        </li>
+        <li class="item">
+          <div class="submenu-item">
+            <span>Inventory Management</span>
+          </div>
+          <ul class="menu-items submenu">
+            <div class="menu-tittle">
+            </div>
+            <li class="item">
+              <a href="#">Inventory</a>
+            </li>
+            <li class="item">
+              <a href="#">Batch & Expiry Management</a>
+            </li>
+            <li class="item">
+              <a href="#">Stock Movement</a>
+            </li>
+            <li class="item">
+              <a href="#">Stock Adjustment</a>
+            </li>
+            <li class="item">
+              <a href="#">Stock Take List</a>
+            </li>
+            <li class="item">
+              <a href="#">Stock Take Approval </a>
+            </li>
+            <li class="item">
+              <a href="#">Stock Transfer</a>
+            </li>
+            <li class="item">
+              <a href="#">Create Product</a>
+            </li>
+            <li class="item">
+              <a href="#">Bulk Image Upload</a>
+            </li>
+            <li class="item">
+              <a href="#">Import Buffer Stock</a>
+            </li>
+            <li class="item">
+              <a href="#">Bulk Product Update</a>
+            </li>
+            <li class="item">
+              <a href="#">Bulk Stock Update</a>
+            </li>
+          </ul>
+        </li>
+        <li class="item">
+          <div class="submenu-item">
+            <span>Reports</span>
+          </div>
+          <ul class="menu-items submenu">
+            <div class="menu-tittle">
+            </div>
+            <li class="item">
+              <a href="#">Generate Reports</a>
+            </li>
+            <li class="item">
+              <a href="#">Generated Reports</a>
+            </li>
+            <li class="item">
+              <a href="#">Pending Delivery</a>
+            </li>
+          </ul>
+        </li>
+        <li class="item">
+          <div class="submenu-item">
+            <span>Outbound Delivery</span>
+          </div>
+          <ul class="menu-items submenu">
+            <div class="menu-tittle">
+            </div>
+            <li class="item">
+              <a href="#">Picking Unassigned</a>
+            </li>
+            <li class="item">
+              <a href="#">Picking Assigned</a>
+            </li>
+            <li class="item">
+              <a href="#">Packing</a>
+            </li>
+            <li class="item">
+              <a href="#">Awaiting Dispatch</a>
+            </li>
+            <li class="item">
+              <a href="#">Dispatch Scheduled</a>
+            </li>
+          </ul>
+        </li>
         <li>
-          <h1>Inbound</h1>
-        <a href="#">Purchase Order (PO)</a>
-        <a href="#">Advance Shipping Note (ASN)</a>
-        <a href="#">GRN</a>
-        <a href="#">Create</a>
-        <a href="#">Bulk Inbound Stock Update</a>
-        
-        <h1>Put Away</h1>
-        <a href="#">Inbound</a>
-        <a href="#">Return Orders</a>
-        <a href="#">Cancel Orders</a>
-        <a href="#">Putaway List</a>
-        
-        <h1>Inventory Management</h1>
-        <a href="#">Inventory</a>
-        <a href="#">Batch & Expiry Management</a>
-        <a href="#">Stock Movement</a>
-        <a href="#">Stock Adjustment</a>
-        <a href="#">Stock Take List</a>
-        <a href="#">Stock Take Approval</a>
-        <a href="#">Stock Transfer</a>
-        <a href="#">Create Product</a>
-        <a href="#">Bulk Image Upload</a>
-        <a href="#">Import Buffer Stock</a>
-        <a href="#">Bulk Product Update</a>
-        <a href="#">Bulk Stock Update</a>
-        
-        <h1>Reports</h1>
-        <a href="#">Generate Reports</a>
-        <a href="#">Generated Reports</a>
-        <a href="#">Pending Delivery</a>
-        
-        <h1>Outbound Delivery</h1>
-        <a href="#">Picking Unassigned</a>
-        <a href="#">Picking Assigned</a>
-        <a href="#">Pacikng</a>
-        <a href="#">Awaiting Dispatch</a>
-        <a href="#">Dispatch Scheduled</a>
-          <button id="logout">Logout</button>
+          <button id="logout"onclick="logoutUser()">Logout</button>
         </li>
       </ul>
     </div>
   </div>
- <div class="main">
-   <div class="text">
-     <h3>IMS</h3>
-     <p>Inventory Management System</p>
+  <div class="main">
+    <div class="text">
+      <h3>IMS</h3>
+      <p>Inventory Management System</p>
     </div>
   </div>
-  
+
+
+<script src="javascript/home.js"></script>
 </body>
 </html>

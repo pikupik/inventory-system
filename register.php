@@ -44,18 +44,11 @@ function registerUser($nama, $email, $password)
         $stmt = $dbh->prepare("INSERT INTO register (nama, email, password) VALUES (:nama, :email, :password)");
         $stmt->bindParam(':nama', $nama);
         $stmt->bindParam(':email', $email);
-<<<<<<< HEAD
         $stmt->bindParam(':password', $password);
         $stmt->execute();
 
         // Registrasi berhasil
         return header("Location: login.php");
-=======
-        $stmt->bindParam(':password', $hashedPassword);
-        $stmt->execute();
-
-        // Registrasi berhasil
->>>>>>> refs/remotes/origin/main
  
     } catch (PDOException $e) {
         // Tangani error jika terjadi masalah dalam koneksi atau operasi database
@@ -93,11 +86,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <p>Inventory Management System</p>
   </div>
  <div class="container">
-<<<<<<< HEAD
    <form method="POST" action="register.php">
-=======
-   <form method="POST" action="login.php">
->>>>>>> refs/remotes/origin/main
         <h2>Register Page</h2>
             <input type="text" placeholder="Enter Your Name" name="nama" required>
             <input type="text" placeholder="Enter Your Email" name="email" required>
