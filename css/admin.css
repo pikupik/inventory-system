@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 5px;
+  background-color: black;
+  width: 360px;
+  height: 100%;
+}
+
+h1 {
+  color: white;
+  font-size: 30px;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+  padding: 10px;
+  margin: 0;
+}
+
+.navbar a {
+  color: white;
+  display: block;
+  padding: 4px;
+  font-size: 23px;
+  text-decoration: none;
+}
+
+#logout {
+  color: black;
+  position: absolute;
+  bottom: 80px;
+  left: 50px;
+  width: 60%;
+  text-align: center;
+  padding: 10px;
+  background-color: yellow;
+  font-size: 16px;
+}
+
+
+
+.main {
+  background: url("../img/background.jpeg") no-repeat;
+  height: 100vh;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.text {
+  margin-top: 600px;
+  margin-right: 65px;
+  color: white;
+  text-align: center;
+}
+
+.text h3 {
+  font-size: 80px;
+}
+
+.text p {
+  font-size: 40px;
+  border-bottom: 2px solid white;
+}
+
+
+

@@ -1,0 +1,150 @@
+/* CSS untuk ukuran desktop */
+body {
+  font-family: Arial, sans-serif;
+  background: url("../img/background.jpeg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.header {
+  text-align: center;
+  padding: 0;
+  margin: 0 auto;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header h1 {
+  font-size: 80px;
+  color: black;
+  font-weight: bold;
+  margin: 0;
+  text-shadow: -1px -1px 1px white, 1px -1px 1px white, -1px 1px 1px white, 1px 1px 1px white;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: revealText 7s linear forwards;
+}
+
+@keyframes revealText {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.header p {
+  font-size: 25px;
+  color: black;
+  font-weight: bold;
+  margin: 0;
+  text-shadow: -1px -1px 1px white, 1px -1px 1px white, -1px 1px 1px white, 1px 1px 1px white;
+  border-bottom: 2px solid pink;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: revealText 2s linear forwards;
+}
+
+@keyframes revealText {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.container {
+  width: 300px;
+  padding: 16px;
+  background-color: rgba(0, 0, 0, 0.3);
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+h2 {
+  text-align: center;
+  color: white;
+}
+
+b {
+  color: white;
+}
+
+input[type=text],
+input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: aqua;
+  color: black;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* CSS untuk ukuran tablet dan di bawahnya */
+@media only screen and (max-width: 768px) {
+  .header {
+    top: 30%;
+  }
+
+  .header h1 {
+    font-size: 60px;
+  }
+
+  .header p {
+    font-size: 20px;
+  }
+
+  .container {
+    width: 80%;
+    max-width: 400px;
+    top: 40%;
+  }
+}
+
+/* CSS untuk ukuran smartphone dan di bawahnya */
+@media only screen and (max-width: 480px) {
+  .header {
+    top: 15%;
+  }
+
+  .header h1 {
+    font-size: 40px;
+  }
+
+  .header p {
+    font-size: 16px;
+  }
+
+  .container {
+    width: 90%;
+    top: 50%;
+  }
+}
